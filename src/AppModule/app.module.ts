@@ -1,9 +1,15 @@
+/**
+ * Angular imports
+ */
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+/**
+ * App imports
+ */
 import { AppComponent } from './app.component';
 
-@NgModule({
+@NgModule( {
   declarations: [
     AppComponent
   ],
@@ -12,5 +18,6 @@ import { AppComponent } from './app.component';
   ],
   providers: [],
   bootstrap: [AppComponent]
-})
-export class AppModule { }
+} )
+export class AppModule {
+}
