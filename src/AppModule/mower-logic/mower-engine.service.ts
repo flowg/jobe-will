@@ -29,8 +29,15 @@ export class MowerEngineService {
     private currentGridSize: [ number, number ];
     private currentMowersData: MowerData[];
 
+    get gridSize(): [ number, number ] {
+        return this.currentGridSize;
+    }
+
+    get mowersData(): MowerData[] {
+        return this.currentMowersData;
+    }
+
     parseInput( input: string ) {
-        console.log( 'Parsing input', input );
         // Checking if the input is a string
         if ( typeof input !== 'string' ) {
             throw new Error( 'Please provide the input as a string' );
@@ -41,12 +48,10 @@ export class MowerEngineService {
         if ( checkResult === null ) {
             throw new Error( 'The input provided is not valid' );
         }
-        console.log( checkResult );
 
         // Retrieving the grid size
         this.currentGridSize = checkResult[ 1 ].split( ' ' )
             .map( ( coordinate: string ) => +coordinate ) as [ number, number ];
-        console.log( this.currentGridSize );
 
         // Retrieving data for the mowers
         const mowersData: string[] = checkResult[ 2 ].split( '\n' );
@@ -87,10 +92,6 @@ export class MowerEngineService {
                 this.currentMowersData[ mowerIndex ].instructions = mowersData[ i ].split( '' ) as MowerInstruction[];
             }
         }
-        console.log( this.currentMowersData );
-        // TODO: Add obstacles
-
-
     }
 
     runMowersInstructions(): string[] {

@@ -3,7 +3,7 @@
  */
 export type PossibleOrientations = 'N' | 'E' | 'S' | 'W';
 
-enum MowerOrientation {
+export enum MowerOrientation {
     N,
     E,
     S,
@@ -20,7 +20,15 @@ export class AutomaticMower {
     private position: [ number, number ];
     private orientation: MowerOrientation;
     private gridSize: [ number, number ];
-    obstacles: string[] = [];
+    private obstacles: string[] = [];
+
+    get initialState(): string {
+        return this.initialPosition.join( ' ' ) + ' ' + this.initialOrientation;
+    }
+
+    get currentOrientation(): MowerOrientation {
+        return this.orientation;
+    }
 
     get finalPosition(): string {
         return this.position.join( ' ' );
