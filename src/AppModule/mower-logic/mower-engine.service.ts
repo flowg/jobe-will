@@ -125,7 +125,7 @@ export class MowerEngineService {
             }
 
             // Outputting final position and orientation after all instructions have been executed
-            outputs.push( `The mower number ${ i } is in this final state: ${ mower.outputPositionWithOrientation() }` );
+            outputs.push( mower.outputPositionWithOrientation() );
         }
 
         return outputs;

@@ -26,9 +26,9 @@ describe( 'AppComponent', () => {
         expect( app ).toBeTruthy();
     } );
 
-    it( `should have as title "Jobe's will"`, () => {
+    it( `should have as title "Jobe's Will"`, () => {
         const fixture = TestBed.createComponent( AppComponent );
         const app = fixture.debugElement.componentInstance;
-        expect( app.title ).toEqual( 'Jobe\'s will' );
+        expect( app.title ).toEqual( 'Jobe\'s Will' );
     } );
 } );

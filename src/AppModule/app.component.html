@@ -1,5 +1,8 @@
-<div>
-    With input file:
+<main>
+    <h2>{{title}}</h2>
+    <p>With input file:</p>
     <pre>{{input}}</pre>
-</div>
-<div *ngFor="let output of outputs">{{output}}</div>
+    <p class="output" *ngFor="let output of outputs; let i=index">
+        The mower number {{i}} is in final state: <span>{{output}}</span>
+    </p>
+</main>

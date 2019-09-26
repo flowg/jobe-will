@@ -10,21 +10,7 @@ import {
  * App imports
  */
 import { MowerEngineService } from './mower-logic/mower-engine.service';
-
-/**
- * TypeScript entities and constants
- */
-const defaultInput = `5 5
-1 2 N
-LFLFLFLFF
-3 3 E
-FFRFFRFRRF`;
-
-/*const defaultInput = `5 5
- 1 2 N
- RFFLF
- 3 3 E
- RRFF`;*/
+import { DEFAULT_INPUT } from './input';
 
 @Component( {
     selector: 'app-root',
@@ -32,7 +18,7 @@ FFRFFRFRRF`;
     styleUrls: [ './app.component.scss' ]
 } )
 export class AppComponent implements OnInit {
-    title = 'Jobe\'s will';
+    title = 'Jobe\'s Will';
     input: string;
     outputs: string[];
 
@@ -45,8 +31,8 @@ export class AppComponent implements OnInit {
     }
 
     private getInput(): string {
-        this.input = defaultInput;
+        this.input = DEFAULT_INPUT;
 
-        return defaultInput;
+        return DEFAULT_INPUT;
     }
 }

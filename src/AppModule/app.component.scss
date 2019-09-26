@@ -1,0 +1,32 @@
+main {
+  background: #F1F8E9;
+  width: 800px;
+  height: 100%;
+  margin: auto;
+  text-align: center;
+  padding: 16px;
+  box-shadow: 0 0 24px #263238;
+
+  h2 {
+    color: #1B5E20;
+    font-size: 3em;
+  }
+
+  pre {
+    background: silver;
+    text-align: left;
+    display: inline-block;
+    margin: 0 auto 24px;
+    border-radius: 2px;
+    padding: 8px;
+    box-shadow: 0 0 4px #263238;
+  }
+
+  .output {
+    span {
+      color: #311B92;
+      font-weight: bold;
+      font-style: italic;
+    }
+  }
+}

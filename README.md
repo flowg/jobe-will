@@ -1,27 +1,39 @@
-# JobeWill
+# Jobe's Will
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.5.
+This project implements a simulation of automatic lawn mowers for rectangular surfaces that can receive instructions through
+an input file.
 
-## Development server
+* Several mowers can be specified through the input file
+* The lawn can be assimilated to a grid with cartesian coordinates
+* The origin ( 0 ; 0 ) is at the lower-left corner of the lawn
+* The X axis goes from left to right
+* The Y axis goes from bottom to top
+* A mower can either move forward or change its orientation by turning left or right
+* Each mower moves sequentially: it means that the next mower moves only after the previous
+one has executed all its instructions
+* When a mower has executed all its instructions, it outputs its position and orientation
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+#### *Restrictions*:
+* If the position after a move is outside the lawn, then the mower do not move, it keeps its orientation
+and process the next instruction
+* If the position after a move is a cell already occupied by another mower, then the mower do not move, it keeps its orientation
+and process the next instruction
 
-## Code scaffolding
+## Install everything
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+After you've cloned the repository, go to the root of the project within your terminal and install all dependencies by typing
+`npm install`.
 
-## Build
+## Display the app
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`.
 
-## Running unit tests
+## Display the tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
 ## Further help
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.5.
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
